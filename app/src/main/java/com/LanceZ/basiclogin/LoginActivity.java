@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void handleFault(BackendlessFault fault) {
                         Toast.makeText(LoginActivity.this,
                                 fault.getMessage(),
-                                Toast.LENGTH_SHORT).show();
+                                Toast.LENGTH_LONG).show();
                     }
                 });
 
