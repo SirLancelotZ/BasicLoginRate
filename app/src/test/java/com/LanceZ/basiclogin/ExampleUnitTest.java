@@ -1,4 +1,4 @@
-package com.garrettshorr.basiclogin;
+package com.LanceZ.basiclogin;
 
 import org.junit.Test;
 

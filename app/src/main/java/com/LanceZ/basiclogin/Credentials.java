@@ -1,4 +1,4 @@
-package com.garrettshorr.basiclogin;
+package com.LanceZ.basiclogin;
 
 public class Credentials {
 

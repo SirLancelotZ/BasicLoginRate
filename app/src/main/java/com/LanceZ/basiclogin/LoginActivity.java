@@ -1,4 +1,4 @@
-package com.garrettshorr.basiclogin;
+package com.LanceZ.basiclogin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: login to a different activity somewhere
                 loginToBackendless();
             }
         });
@@ -50,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                         CreateAccountActivity.class);
 
                 String username = editTextUsername.getText().toString();
-                if(username.length() > 0) {
+                if (username.length() > 0) {
                     createAccountIntent.putExtra(EXTRA_USERNAME, username);
                 }
                 startActivity(createAccountIntent);
@@ -72,6 +71,10 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,
                                 response.getEmail() + " Logged In"
                                 , Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this,
+                                RestaurantListActivity.class);
+                        startActivity(intent);
+
                     }
 
                     @Override

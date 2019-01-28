@@ -1,4 +1,4 @@
-package com.garrettshorr.basiclogin;
+package com.LanceZ.basiclogin;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
