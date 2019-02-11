@@ -118,7 +118,7 @@ public class Restaurant implements Parcelable {
     private String ownerId; //backendless fields
 
     // need a default constructor for Backendless
-    public Restaurant() {
+    public Restaurant(String restaurantName, String restaurantCuisine, int restaurantPrice, String restaurantAddress, double restaurantRating) {
     }
 
     public Restaurant(String name, String cuisine, double rating, String websiteLink, String address, int price) {
