@@ -38,10 +38,20 @@ public class RestaurantActivity extends AppCompatActivity {
                 saveToBackendless();
             }
         });
-        //prefillFields();
+        prefillFields();
     }
 
-
+    private void prefillFields() {
+        Intent restaurantIntent = getIntent();
+        restaurant = restaurantIntent.getParcelableExtra(RestaurantListActivity.EXTRA_RESTAURANT);
+        if(restaurant != null){
+            editTextRestaurantName.setText(restaurant.getName());
+            editTextRestaurantCuisne.setText(restaurant.getCuisine());
+            editTextRestaurantAddress.setText(restaurant.getAddress());
+            ratingBarRestaurantRating.setRating((float) restaurant.getRating());
+            seekBarRestaurantPrice.setProgress(restaurant.getPrice());
+        }
+    }
 
 
     Intent restaurantIntent = getIntent();

@@ -76,16 +76,20 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
 
                     }
+//
+//                    @Override
+//                    public void handleFault(BackendlessFault fault) {
+//                        Toast.makeText(LoginActivity.this,
+//                                fault.getMessage(),
+//                                Toast.LENGTH_LONG).show();
+//                    }
+//                });
 
-                    @Override
-                    public void handleFault(BackendlessFault fault) {
-                        Toast.makeText(LoginActivity.this,
-                                fault.getMessage(),
-                                Toast.LENGTH_LONG).show();
-                    }
-                });
-
-
+        @Override
+        public void handleFault(BackendlessFault fault) {
+            Toast.makeText(LoginActivity.this, fault.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }, true);
     }
 
     private void wireWidgets() {
@@ -94,4 +98,6 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.edittext_login_password);
         editTextUsername = findViewById(R.id.edittext_login_username);
     }
+
+   
 }

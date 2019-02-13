@@ -153,14 +153,14 @@ public class Restaurant implements Parcelable {
     public void setCuisine(String cuisine) {
         this.cuisine = cuisine;
     }
-
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
     public double getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
-    }
+
 
     public String getWebsiteLink() {
         return websiteLink;

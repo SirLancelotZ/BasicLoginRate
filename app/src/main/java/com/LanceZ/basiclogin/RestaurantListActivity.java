@@ -3,6 +3,10 @@ package com.LanceZ.basiclogin;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -43,22 +47,17 @@ public class RestaurantListActivity extends AppCompatActivity {
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
         queryBuilder.setWhereClause(whereClause);
 
-        Backendless.Data.of( Restaurant.class).find(queryBuilder,  new AsyncCallback<List<Restaurant>>(){
+
+        Backendless.Data.of(Restaurant.class).find(queryBuilder, new AsyncCallback<List<Restaurant>>() {
             @Override
             public void handleResponse(final List<Restaurant> restaurantList )
             {
                 adapter = new RestaurantAdapter(RestaurantListActivity.this, R.layout.item_restaurantlist, restaurantList);
 
                 // all Restaurant instances have been found
-//                ArrayAdapter<Restaurant> adapter = new ArrayAdapter<>(
-//                        RestaurantListActivity.this,
-//                        android.R.layout.simple_list_item_1,
-//                        restaurantList);
+
                 listViewRestaurant.setAdapter(adapter);
-//
-//                listViewRestaurant.setOnItemClickListener(new AdapterView<?> parent, View view, int position, long id){
-//                Intent restaurantDetailIntent = new Intent(RestaurantListActivity.this, RestaurantActivity.class);
-//                restaurantDetailIntent.putExtra();
+
                 listViewRestaurant.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -68,10 +67,6 @@ public class RestaurantListActivity extends AppCompatActivity {
                     }
                 });
             }
-
-
-
-
 
 
             @Override
@@ -96,4 +91,3 @@ public class RestaurantListActivity extends AppCompatActivity {
 
 
 }
-
