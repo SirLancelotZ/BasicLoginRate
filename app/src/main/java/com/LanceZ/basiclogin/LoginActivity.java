@@ -71,10 +71,9 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,
                                 response.getEmail() + " Logged In"
                                 , Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this,
-                                RestaurantListActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, RestaurantListActivity.class);
                         startActivity(intent);
-
+                        finish();
                     }
 //
 //                    @Override

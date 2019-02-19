@@ -31,12 +31,32 @@ public class RestaurantAdapter extends ArrayAdapter<Restaurant> {
     @NonNull
     @Override
 
+//    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+//        if(convertView==null) {
+//            convertView = LayoutInflater.from(context).inflate(R.layout.item_restaurantlist, parent, false); }
+//
+//        TextView textViewName = convertView.findViewById(R.id.textView_restaurantitem_name);
+//        TextView textViewPrice = convertView.findViewById(R.id.textView_restaurant_price);
+//        RatingBar ratingBar = convertView.findViewById(R.id.ratingBar_restaurant_rating);
+//
+//        Restaurant currentRestaurant = restaurantList.get(position);
+//        textViewName.setText(currentRestaurant.getName());
+//
+//        String price = "";
+//        for (int i = 0; i < currentRestaurant.getPrice(); i++) {
+//            price += "$";
+//        }
+//        textViewPrice.setText(price);
+//                ratingBar.setRating((float)currentRestaurant.getRating());
+//        return convertView;
+//    }
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-if(convertView==null) {
+        //inflate layout, wirewidgets, insert dat, return layout
 
+        if(convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_restaurantlist, parent, false);
+        }
 
-    convertView = LayoutInflater.from(context).inflate(R.layout.item_restaurantlist, parent, false);
-}
         TextView textViewName = convertView.findViewById(R.id.textView_restaurantitem_name);
         TextView textViewPrice = convertView.findViewById(R.id.textView_restaurant_price);
         RatingBar ratingBar = convertView.findViewById(R.id.ratingBar_restaurant_rating);
@@ -44,12 +64,16 @@ if(convertView==null) {
         Restaurant currentRestaurant = restaurantList.get(position);
         textViewName.setText(currentRestaurant.getName());
 
+        //get the right number of $ signs
         String price = "";
         for (int i = 0; i < currentRestaurant.getPrice(); i++) {
             price += "$";
         }
         textViewPrice.setText(price);
-                ratingBar.setRating((float)currentRestaurant.getRating());
+
+        ratingBar.setRating((float) currentRestaurant.getRating());
+
+
         return convertView;
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Basic Login</string>
+    <string name="app_name">Basic Restaurant Rater</string>
     <string name="login">Login</string>
     <string name="create_an_account">Create An Account</string>
     <string name="password">Password</string>
