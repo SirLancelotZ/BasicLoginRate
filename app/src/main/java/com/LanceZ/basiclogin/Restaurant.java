@@ -1,4 +1,5 @@
 package com.LanceZ.basiclogin;
+
 //
 //public class Restaurant {
 //
@@ -102,10 +103,13 @@ package com.LanceZ.basiclogin;
 //    }
 //}
 
+
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Restaurant implements Parcelable {
+
 
     // name, cuisine, rating, link to website/yelp, price, address
     private String name;
@@ -128,6 +132,10 @@ public class Restaurant implements Parcelable {
         this.websiteLink = websiteLink;
         this.address = address;
         this.price = price;
+    }
+
+    public Restaurant() {
+
     }
 
     public int getPrice() {

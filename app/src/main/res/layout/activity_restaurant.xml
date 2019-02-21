@@ -25,12 +25,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Cuisine"
         app:layout_constraintBottom_toTopOf="@+id/editText_restaurantactivitiy_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivitiy_name"
-        tools:text="Cuisine" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivitiy_name" />
 
     <EditText
         android:id="@+id/editText_restaurantactivitiy_address"
@@ -38,12 +38,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Address"
         app:layout_constraintBottom_toTopOf="@+id/ratingBar_restaurantactivitiy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivitiy_cuisine"
-        tools:text="Address" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivitiy_cuisine" />
 
     <RatingBar
         android:id="@+id/ratingBar_restaurantactivitiy"
@@ -58,10 +58,9 @@
     <SeekBar
         android:id="@+id/seekBar_restaurantactivitiy"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:max="5"
-        android:progress="3"
+        android:layout_width="207dp"
+        android:layout_height="18dp"
+        android:max="4"
         app:layout_constraintBottom_toTopOf="@+id/button_restaurantactivitiy_confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -72,9 +71,9 @@
         android:id="@+id/button_restaurantactivitiy_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Button"
+        android:layout_marginEnd="8dp"
+        android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

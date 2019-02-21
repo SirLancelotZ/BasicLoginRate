@@ -75,14 +75,6 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
-//
-//                    @Override
-//                    public void handleFault(BackendlessFault fault) {
-//                        Toast.makeText(LoginActivity.this,
-//                                fault.getMessage(),
-//                                Toast.LENGTH_LONG).show();
-//                    }
-//                });
 
         @Override
         public void handleFault(BackendlessFault fault) {

@@ -1,6 +1,7 @@
 package com.LanceZ.basiclogin;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class RestaurantActivity extends AppCompatActivity {
     private RatingBar ratingBarRestaurantRating;
     private SeekBar seekBarRestaurantPrice;
     private Button buttonRestaurantConfirm;
+    private Restaurant restaurant;
 
 
     @Override
@@ -54,8 +56,10 @@ public class RestaurantActivity extends AppCompatActivity {
     }
 
 
-    Intent restaurantIntent = getIntent();
-    Restaurant restaurant = restaurantIntent.getParcelableExtra(RestaurantListActivity.EXTRA_RESTAURANT);
+//    Intent restaurantIntent = getIntent();
+
+
+//    Restaurant restaurant = restaurantIntent.getParcelableExtra(RestaurantListActivity.EXTRA_RESTAURANT);
 
 
 
