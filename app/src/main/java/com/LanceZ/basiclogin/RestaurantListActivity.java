@@ -151,8 +151,7 @@ private void populateListView() {
         @Override
         public void handleResponse(final List<Restaurant> restaurantList)
         {
-            RestaurantAdapter adapter = new RestaurantAdapter(RestaurantListActivity.this, android.R.layout.simple_list_item_1, restaurantList
-            );
+            RestaurantAdapter adapter = new RestaurantAdapter(RestaurantListActivity.this, android.R.layout.simple_list_item_1, restaurantList);
 
             listViewRestaurant.setAdapter(adapter);
 

@@ -12,12 +12,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/editText_restaurantactivitiy_cuisine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name"
+        android:hint="Name"/>
 
     <EditText
         android:id="@+id/editText_restaurantactivitiy_cuisine"
@@ -25,7 +26,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Cuisine"
+        tools:text="Cuisine"
+        android:hint="Cuisine"
         app:layout_constraintBottom_toTopOf="@+id/editText_restaurantactivitiy_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -38,7 +40,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Address"
+        tools:text="Address"
+        android:hint="Address"
         app:layout_constraintBottom_toTopOf="@+id/ratingBar_restaurantactivitiy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
