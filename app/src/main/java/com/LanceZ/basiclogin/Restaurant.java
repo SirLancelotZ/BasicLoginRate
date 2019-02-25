@@ -111,13 +111,12 @@ import android.os.Parcelable;
 public class Restaurant implements Parcelable {
 
 
-    // name, cuisine, rating, link to website/yelp, price, address
     private String name;
     private String cuisine;
-    private double rating; // 0->5 with .5 increments
+    private double rating;
     private String websiteLink;
     private String address;
-    private int price; // 1->5 with 1 increments
+    private int price;
     private String objectId; //backendless fields
     private String ownerId; //backendless fields
 
@@ -218,7 +217,7 @@ public class Restaurant implements Parcelable {
         name = in.readString();
         cuisine = in.readString();
         rating = in.readDouble();
-        websiteLink = in.readString();
+        //websiteLink = in.readString();
         address = in.readString();
         price = in.readInt();
         objectId = in.readString();
@@ -235,23 +234,23 @@ public class Restaurant implements Parcelable {
         dest.writeString(name);
         dest.writeString(cuisine);
         dest.writeDouble(rating);
-        dest.writeString(websiteLink);
+        //dest.writeString(websiteLink);
         dest.writeString(address);
         dest.writeInt(price);
         dest.writeString(objectId);
         dest.writeString(ownerId);
     }
 
-    @SuppressWarnings("unused")
-    public static final Parcelable.Creator<Restaurant> CREATOR = new Parcelable.Creator<Restaurant>() {
-        @Override
-        public Restaurant createFromParcel(Parcel in) {
-            return new Restaurant(in);
-        }
-
-        @Override
-        public Restaurant[] newArray(int size) {
-            return new Restaurant[size];
-        }
-    };
+//    @SuppressWarnings("unused")
+//    public static final Parcelable.Creator<Restaurant> CREATOR = new Parcelable.Creator<Restaurant>() {
+//        @Override
+//        public Restaurant createFromParcel(Parcel in) {
+//            return new Restaurant(in);
+//        }
+//
+//        @Override
+//        public Restaurant[] newArray(int size) {
+//            return new Restaurant[size];
+//        }
+//    };
 }

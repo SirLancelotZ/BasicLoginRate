@@ -64,9 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                 new AsyncCallback<BackendlessUser>() {
                     @Override
                     public void handleResponse(BackendlessUser response) {
-                        // Start the new activity here because
-                        // this method is called when the login is complete
-                        // and successful
+
 
                         Toast.makeText(LoginActivity.this,
                                 response.getEmail() + " Logged In"

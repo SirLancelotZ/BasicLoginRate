@@ -18,7 +18,7 @@ import com.backendless.exceptions.BackendlessFault;
 public class RestaurantActivity extends AppCompatActivity {
 
     private EditText editTextRestaurantName;
-    private EditText editTextRestaurantCuisne;
+    private EditText editTextRestaurantCuisine;
     private EditText editTextRestaurantAddress;
     private RatingBar ratingBarRestaurantRating;
     private SeekBar seekBarRestaurantPrice;
@@ -48,7 +48,7 @@ public class RestaurantActivity extends AppCompatActivity {
         restaurant = restaurantIntent.getParcelableExtra(RestaurantListActivity.EXTRA_RESTAURANT);
         if(restaurant != null){
             editTextRestaurantName.setText(restaurant.getName());
-            editTextRestaurantCuisne.setText(restaurant.getCuisine());
+            editTextRestaurantCuisine.setText(restaurant.getCuisine());
             editTextRestaurantAddress.setText(restaurant.getAddress());
             ratingBarRestaurantRating.setRating((float) restaurant.getRating());
             seekBarRestaurantPrice.setProgress(restaurant.getPrice());
@@ -61,25 +61,30 @@ public class RestaurantActivity extends AppCompatActivity {
 
 //    Restaurant restaurant = restaurantIntent.getParcelableExtra(RestaurantListActivity.EXTRA_RESTAURANT);
 
-
+    private boolean allFieldsValid(String name, String cuisine, String address) {
+        if (name.length() > 0 && cuisine.length() > 0 && address.length() > 0) {
+            return true;
+        }
+        return false;
+    }
 
     private void saveToBackendless() {
         String restaurantName = editTextRestaurantName.getText().toString();
-        String restaurantCuisine = editTextRestaurantCuisne.getText().toString();
+        String restaurantCuisine = editTextRestaurantCuisine.getText().toString();
         String restaurantAddress = editTextRestaurantAddress.getText().toString();
         int restaurantPrice = seekBarRestaurantPrice.getProgress();
         double restaurantRating = ratingBarRestaurantRating.getRating();
 
-        // if(allFieldsValid(restaurantName, restaurantCuisine, restaurantAddress, restaurantPrice, restaurantRating)){
+         if(allFieldsValid(restaurantName, restaurantCuisine, restaurantAddress)){
 
-        if (restaurant != null) {
+        //if (restaurant != null) {
             restaurant.setName(restaurantName);
             restaurant.setAddress(restaurantAddress);
             restaurant.setCuisine(restaurantCuisine);
             restaurant.setRating(restaurantRating);
             restaurant.setPrice(restaurantPrice);
         } else {
-            Restaurant restaurant = new Restaurant(restaurantName, restaurantCuisine, restaurantPrice, restaurantAddress, restaurantRating);
+            restaurant = new Restaurant(restaurantName, restaurantCuisine, restaurantPrice, restaurantAddress, restaurantRating);
         }
 
 
@@ -102,7 +107,7 @@ public class RestaurantActivity extends AppCompatActivity {
 
     private void wireWidgets(){
         editTextRestaurantName = findViewById(R.id.editText_restaurantactivitiy_name);
-        editTextRestaurantCuisne = findViewById(R.id.editText_restaurantactivitiy_cuisine);
+        editTextRestaurantCuisine = findViewById(R.id.editText_restaurantactivitiy_cuisine);
         editTextRestaurantAddress = findViewById(R.id.editText_restaurantactivitiy_address);
         ratingBarRestaurantRating = findViewById(R.id.ratingBar_restaurant_rating);
         seekBarRestaurantPrice = findViewById(R.id.seekBar_restaurantactivitiy);
