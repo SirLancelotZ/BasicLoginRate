@@ -1,7 +1,6 @@
 package com.LanceZ.basiclogin;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -106,11 +105,11 @@ public class RestaurantActivity extends AppCompatActivity {
     //private boolean allFieldsValid(String restaurantName, String restaurantCuisine,
 
     private void wireWidgets(){
-        editTextRestaurantName = findViewById(R.id.editText_restaurantactivitiy_name);
-        editTextRestaurantCuisine = findViewById(R.id.editText_restaurantactivitiy_cuisine);
-        editTextRestaurantAddress = findViewById(R.id.editText_restaurantactivitiy_address);
-        ratingBarRestaurantRating = findViewById(R.id.ratingBar_restaurant_rating);
-        seekBarRestaurantPrice = findViewById(R.id.seekBar_restaurantactivitiy);
-        buttonRestaurantConfirm = findViewById(R.id.button_restaurantactivitiy_confirm);
+        editTextRestaurantName = findViewById(R.id.editText_restaurantactivity_name);
+        editTextRestaurantCuisine = findViewById(R.id.editText_restaurantactivity_cuisine);
+        editTextRestaurantAddress = findViewById(R.id.editText_restaurantactivity_address);
+        ratingBarRestaurantRating = findViewById(R.id.ratingBar_restaurantactivity);
+        seekBarRestaurantPrice = findViewById(R.id.seekBar_restaurantactivity);
+        buttonRestaurantConfirm = findViewById(R.id.button_restaurantactivity_confirm);
     }
 }

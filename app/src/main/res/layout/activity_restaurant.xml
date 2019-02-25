@@ -7,12 +7,12 @@
     tools:context="com.LanceZ.basiclogin.RestaurantActivity">
 
     <EditText
-        android:id="@+id/editText_restaurantactivitiy_name"
+        android:id="@+id/editText_restaurantactivity_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText_restaurantactivitiy_cuisine"
+        app:layout_constraintBottom_toTopOf="@+id/editText_restaurantactivity_cuisine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,57 +21,57 @@
         android:hint="Name"/>
 
     <EditText
-        android:id="@+id/editText_restaurantactivitiy_cuisine"
+        android:id="@+id/editText_restaurantactivity_cuisine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         tools:text="Cuisine"
         android:hint="Cuisine"
-        app:layout_constraintBottom_toTopOf="@+id/editText_restaurantactivitiy_address"
+        app:layout_constraintBottom_toTopOf="@+id/editText_restaurantactivity_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivitiy_name" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivity_name" />
 
     <EditText
-        android:id="@+id/editText_restaurantactivitiy_address"
+        android:id="@+id/editText_restaurantactivity_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         tools:text="Address"
         android:hint="Address"
-        app:layout_constraintBottom_toTopOf="@+id/ratingBar_restaurantactivitiy"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar_restaurantactivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivitiy_cuisine" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivity_cuisine" />
 
     <RatingBar
-        android:id="@+id/ratingBar_restaurantactivitiy"
+        android:id="@+id/ratingBar_restaurantactivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar_restaurantactivitiy"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_restaurantactivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivitiy_address" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurantactivity_address" />
 
     <SeekBar
-        android:id="@+id/seekBar_restaurantactivitiy"
+        android:id="@+id/seekBar_restaurantactivity"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="207dp"
         android:layout_height="18dp"
         android:max="4"
-        app:layout_constraintBottom_toTopOf="@+id/button_restaurantactivitiy_confirm"
+        app:layout_constraintBottom_toTopOf="@+id/button_restaurantactivity_confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar_restaurantactivitiy" />
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar_restaurantactivity" />
 
     <Button
-        android:id="@+id/button_restaurantactivitiy_confirm"
+        android:id="@+id/button_restaurantactivity_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -81,5 +81,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar_restaurantactivitiy" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_restaurantactivity" />
 </android.support.constraint.ConstraintLayout>
