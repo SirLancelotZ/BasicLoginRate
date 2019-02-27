@@ -75,9 +75,8 @@ public class RestaurantActivity extends AppCompatActivity {
         double restaurantRating = ratingBarRestaurantRating.getRating();
 
          if(allFieldsValid(restaurantName, restaurantCuisine, restaurantAddress)){
-
-        //if (restaurant != null) {
-            restaurant.setName(restaurantName);
+             if (restaurant != null) {
+             restaurant.setName(restaurantName);
             restaurant.setAddress(restaurantAddress);
             restaurant.setCuisine(restaurantCuisine);
             restaurant.setRating(restaurantRating);
@@ -87,8 +86,8 @@ public class RestaurantActivity extends AppCompatActivity {
         }
 
 
-        Restaurant restaurant = new Restaurant(restaurantName, restaurantCuisine, restaurantPrice, restaurantAddress, restaurantRating);
-        Backendless.Persistence.of(Restaurant.class).save(restaurant, new AsyncCallback<Restaurant>() {
+        //Restaurant restaurant = new Restaurant(restaurantName, restaurantCuisine, restaurantPrice, restaurantAddress, restaurantRating);
+        Backendless.Persistence.save(restaurant, new AsyncCallback<Restaurant>() {
             public void handleResponse(Restaurant restaurant) {
                 finish();
             }
@@ -100,9 +99,8 @@ public class RestaurantActivity extends AppCompatActivity {
             }
 
         });
-    }
+    }}
 
-    //private boolean allFieldsValid(String restaurantName, String restaurantCuisine,
 
     private void wireWidgets(){
         editTextRestaurantName = findViewById(R.id.editText_restaurantactivity_name);

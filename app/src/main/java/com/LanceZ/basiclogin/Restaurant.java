@@ -122,16 +122,20 @@ public class Restaurant implements Parcelable {
 
     // need a default constructor for Backendless
     public Restaurant(String restaurantName, String restaurantCuisine, int restaurantPrice, String restaurantAddress, double restaurantRating) {
+        this.name = restaurantName;
+        this.cuisine=restaurantCuisine;
+        this.price=restaurantPrice;
+        this.address=restaurantAddress;
+        this.rating=restaurantRating;
     }
 
-    public Restaurant(String name, String cuisine, double rating, String websiteLink, String address, int price) {
-        this.name = name;
-        this.cuisine = cuisine;
-        this.rating = rating;
-        this.websiteLink = websiteLink;
-        this.address = address;
-        this.price = price;
-    }
+//    public Restaurant(String name, String cuisine, double rating, String websiteLink, String address, int price) {
+//        this.name = name;
+//        this.cuisine = cuisine;
+//        this.rating = rating;
+//        this.address = address;
+//        this.price = price;
+//    }
 
     public Restaurant() {
 
@@ -168,14 +172,6 @@ public class Restaurant implements Parcelable {
     }
 
 
-
-    public String getWebsiteLink() {
-        return websiteLink;
-    }
-
-    public void setWebsiteLink(String websiteLink) {
-        this.websiteLink = websiteLink;
-    }
 
     public String getAddress() {
         return address;
@@ -217,7 +213,6 @@ public class Restaurant implements Parcelable {
         name = in.readString();
         cuisine = in.readString();
         rating = in.readDouble();
-        //websiteLink = in.readString();
         address = in.readString();
         price = in.readInt();
         objectId = in.readString();
@@ -234,23 +229,22 @@ public class Restaurant implements Parcelable {
         dest.writeString(name);
         dest.writeString(cuisine);
         dest.writeDouble(rating);
-        //dest.writeString(websiteLink);
         dest.writeString(address);
         dest.writeInt(price);
         dest.writeString(objectId);
         dest.writeString(ownerId);
     }
 
-//    @SuppressWarnings("unused")
-//    public static final Parcelable.Creator<Restaurant> CREATOR = new Parcelable.Creator<Restaurant>() {
-//        @Override
-//        public Restaurant createFromParcel(Parcel in) {
-//            return new Restaurant(in);
-//        }
-//
-//        @Override
-//        public Restaurant[] newArray(int size) {
-//            return new Restaurant[size];
-//        }
-//    };
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<Restaurant> CREATOR = new Parcelable.Creator<Restaurant>() {
+        @Override
+        public Restaurant createFromParcel(Parcel in) {
+            return new Restaurant(in);
+        }
+
+        @Override
+        public Restaurant[] newArray(int size) {
+            return new Restaurant[size];
+        }
+    };
 }
